@@ -1,0 +1,28 @@
+### Create report
+
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "make":"toyota",
+  "year": 2010,
+  "price": 100000,
+  "mileage":5000,
+  "model" :"cc",
+  "lng" : 11,
+  "lat":21
+}
+
+### Update approve report
+
+PATCH  http://localhost:3000/reports/7
+content-type: application/json
+
+{
+  "approved": true
+}
+
+### Create estimate
+
+GET  http://localhost:3000/reports?make=toyota&year=2010&model=cc&mileage=1000&lng=11&lat=21&price=100000
+content-type: application/json
